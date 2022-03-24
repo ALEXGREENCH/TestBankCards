@@ -3,7 +3,6 @@ import kotlin.random.Random
 
 class Finance {
 
-    //fun sberCard(): String = CreditCard.generateNumber(CreditCard.sberCard, 16, 1)[0]
     fun sberCard(): String = CreditCard.generateNumber(CreditCard.sberCard.random(), 16)
 
     object CreditCard {
@@ -17,22 +16,6 @@ class Finance {
             "427601",
             "220220",
         )
-
-        /*      // TODO: BIN-ы visa & mastercard
-                https://www.freebinchecker.com/sberbank-of-russia_russian-federation-issuer-bin-list-country?hl=ru
-                https://www.freebinchecker.com/tinkoff-credit-systems-bank-cjsc_russian-federation-issuer-bin-list-country?hl=ru
-                https://www.freebinchecker.com/vtb-bank-ojsc_russian-federation-issuer-bin-list-country?hl=ru
-                https://www.freebinchecker.com/cjsc-alfa-bank_russian-federation-issuer-bin-list-country?hl=ru
-                https://www.freebinchecker.com/gazprombank-ojsc_russian-federation-issuer-bin-list-country?hl=ru
-                https://www.freebinchecker.com/jscb-rosbank_russian-federation-issuer-bin-list-country?hl=ru
-                https://www.freebinchecker.com/ojsc-promsvyazbank_russian-federation-issuer-bin-list-country?hl=ru
-                https://www.freebinchecker.com/raiffeisen-bank-ltd_russian-federation-issuer-bin-list-country?hl=ru
-                https://www.freebinchecker.com/llc-home-credit-and-finance-bank_russian-federation-issuer-bin-list-country?hl=ru
-                https://www.freebinchecker.com/otkritie-bank-jsc_russian-federation-issuer-bin-list-country
-                https://www.freebinchecker.com/russkiy-standard_russian-federation-issuer-bin-list-country?hl=ru
-                https://www.freebinchecker.com/qiwi-bank-jsc_russian-federation-issuer-bin-list-country?hl=ru
-         */
-
 
         private fun luhn(number: String, doubleOdd: Boolean = true): Int {
             val numberStr = number.reversed()
@@ -60,15 +43,6 @@ class Finance {
 
             return controlSum
         }
-
-        //fun generateNumber(prefixList: List<String>, length: Int, howMany: Int): MutableList<String>{
-        //    val arr = mutableListOf<String>()
-        //    for (i in 0 until howMany){
-        //        arr.add(generateNumber(prefixList.random(), length))
-        //    }
-        //    return arr
-        //}
-
 
         fun generateNumber(prefix: String, length: Int): String {
             return completedNumber(prefix, length)
