@@ -148,6 +148,8 @@ _Разные BIN-ы российских банков:_
   <li>https://www.freebinchecker.com/qiwi-bank-jsc_russian-federation-issuer-bin-list-country?hl=ru</li>
 </ul>
 
+UPD. Посмотрел js код формы оплаты yoomoney, нашёл json со списком BIN-ов российских банков. Поискал на гитхабе данные с него, наткнулся на интересный репозиторий с подобными изысканиями:
+https://github.com/WhiteApfel/rubin
 
 
 
