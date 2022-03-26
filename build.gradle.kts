@@ -13,6 +13,10 @@ repositories {
 
 
 
-tasks.withType<KotlinCompile>() {
+tasks.withType<KotlinCompile> {
     kotlinOptions.jvmTarget = "1.8"
+}
+
+dependencies {
+    implementation("com.google.code.gson:gson:2.9.0")
 }
